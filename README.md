@@ -2,9 +2,9 @@
 
 ## About me
 
-I am a neuroscientist, project manager, and aspiring data scientist in Mannheim, Germany. I want to understand the world and help improve our lives!
+I am a neuroscientist, project manager, and aspiring data scientist in [Mannheim, Germany](https://www.mannheim.de/en). I want to understand the world and help improve our lives!
 
-You can find out more on [LinkedIn](https://www.linkedin.com/in/arcosdiaz), or you can take a look at my [github](https://github.com/dariodata) and [kaggle](https://www.kaggle.com/dariodata) profiles.
+You can find me on [LinkedIn](https://www.linkedin.com/in/arcosdiaz), or you can take a look at my [github](https://github.com/dariodata) and [kaggle](https://www.kaggle.com/dariodata) profiles.
 
 ## What I'm interested in
 
