@@ -1,37 +1,23 @@
-## Welcome to GitHub Pages
+# Dario Arcos-Díaz
 
-You can use the [editor on GitHub](https://github.com/dariodata/dariodata.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## About me
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+I am a neuroscientist, project manager, and aspiring data scientist in Mannheim, Germany. I want to understand the world and help improve our lives!
 
-### Markdown
+You can find out more on [LinkedIn](https://www.linkedin.com/in/arcosdiaz), or you can take a look at my [github](https://github.com/dariodata) and [kaggle](https://www.kaggle.com/dariodata) profiles.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## What I'm interested in
 
-```markdown
-Syntax highlighted code block
+- Machine learning
+- Healthcare
+- Data science
+- Python
+- Cats
 
-# Header 1
-## Header 2
-### Header 3
+## Where I'm from
 
-- Bulleted
-- List
+I was born in [Pasto, Colombia](https://en.wikipedia.org/wiki/Pasto,_Colombia). If you are looking for your next travel destination [check it out](https://www.lonelyplanet.com/colombia).
 
-1. Numbered
-2. List
+### Contact
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/dariodata/dariodata.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Send me a message per [LinkedIn](https://www.linkedin.com/in/arcosdiaz)!
