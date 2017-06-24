@@ -5,11 +5,17 @@ html {
 }
 
 /* Titles */
-h1 { text-transform: uppercase }
+h1 { text-transform: uppercase;
+  font-size:1.5em;
+  font-weight:normal;
+}
+h2 { font-weight:normal;
+  color:#7e8284;
+  font-size:1.3em}
 h1, h2 { 
-	font-weight: normal; 
-  margin-top: 10px;
-  margin-bottom: 10px;
+/*	font-weight: normal; */
+  margin-top: 30px;
+  margin-bottom: auto;
 }
 
 
@@ -40,7 +46,7 @@ h1, h2 {
 {
   margin-top: 50px;
   margin-bottom: 50px;
-  text-align: justify;
+  /*text-align: justify;*/
   color: #333;
 }
 
@@ -106,8 +112,9 @@ a:hover { text-decoration: underline; }
 
 /* Code */
 .highlight pre {
-  font-size: 14px;
-  overflow: scroll;
+  font-size: 12px;
+  overflow: auto;
+  line-height:1.2em;
 }
 
 /* Sidebar */
