@@ -80,12 +80,13 @@
         <h2 class="post_title post_detail"><a href="/personalized-medicine-kaggle-competition.html" rel="bookmark" title="Permalink to Personalized Medicine Kaggle Competition">Personalized Medicine Kaggle Competition</a></h2>
         <div class="entry-content blog-post">
             <p>competition.</p>
-<h2>Introduction</h2>
-<p>This notebook describes my approach to the <a href="https://www.kaggle.com/c/msk-redefining-cancer-treatment">Kaggle competition</a> named in the title. This was a research competition at Kaggle in cooperation with the Memorial Sloan Kettering Cancer Center (MSKCC).</p>
+<h1>Introduction</h1>
+<p>This notebook describes my approach to the <a href="https://www.kaggle.com/c/msk-redefining-cancer-treatment">Personalized Healthcare Redefining Cancer Treatment Kaggle 
+competition</a>. This was a research competition at Kaggle in cooperation with the Memorial Sloan Kettering Cancer Center (MSKCC).</p>
 <p>The goal of the competition was to create a machine learning algorithm that can classify genetic variations that are present in cancer cells.</p>
 <p>Tumors contain cells with many different abnormal mutations in their DNA: some of these mutations are the drivers of tumor growth, whereas others are neutral and considered <em>passengers</em>. Normally, mutations are manually classified into different categories after literature review by clinicians. The dataset made available for this competition contains mutations that have been manually anotated into 9 different categories. The goal is to predict the correct category of mutations in the test set.</p>
 <p>The model and submission described here got me to the 140th place (out of 1386 teams) or top 11%.</p>
-<h2>Data</h2>
+<h1>Data</h1>
 <p>The data comes in two different kinds of files: one of them contains information about the genetic variants (<em>training_variants</em> and <em>stage2_test_variants.csv</em>) and the other contains the text (clinical evidence) that was used to manually classify the variants (<em>training_text</em> and <em>stage2_test_text.csv</em>). The training data contains a class target feature corresponding to one of the 9 categories that variants can be classified as.</p>
 <p><em>Note: the "stage2" prefix of the test files is due to the nature of the competition. There was an initial test set that was used at the beginning of the competition and a "stage2" test set that was used in the final week before the deadline to make the submissions.</em></p>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
@@ -193,7 +194,7 @@ Number of test variants: 986
 </div>
 
 <p>The data from the different train and test files is now consolidated into one single file. This is necessary for the correct vectorization of the text data and categorical data later on. We can see that the text information resembles scientific article text. We will process this consolidated file in the next step.</p>
-<h2>Preprocessing</h2>
+<h1>Preprocessing</h1>
 <p>In order to be able to use this data to train a machine learning model, we need to extract the features from the dataset. This means that we have to transform the text data into vectors that can be understood by an algorithm. As I am not an expert in Natural Language Processing, I applied a modified version of <a href="https://www.kaggle.com/alyosama/doc2vec-with-keras-0-77">this script published on Kaggle.</a> Afterwards we will have the data in a form that I can use to train a neural network.</p>
 <div class="highlight"><pre><span></span><span class="c1"># Pre-processing script by Aly Osama https://www.kaggle.com/alyosama/doc2vec-with-keras-0-77</span>
 
@@ -706,7 +707,7 @@ Test Accuracy: 0.643609
 
 <p><img alt="png" src="images/personalized-medicine_30_1.png"></p>
 <p>From my validation results we can observe that the network learned nicely. However, the final cost of the training data was 0.665462, where as the validation data had a final cost of 1.74987. This is a large difference and an indication that the model is overfitting. Moreover the accuracy (defined here as the fraction of correct predictions) is very high (97.9%) for the training data and only 64.3% for the validation set. Another indication that the model is overfitting even though I have used both dropout and L2 regularization to counteract this.</p>
-<h2>Make predictions</h2>
+<h1>Make predictions</h1>
 <p>We use the learned parameteres to make a prediction on the test data.</p>
 <div class="highlight"><pre><span></span><span class="c1"># use learned parameters to make prediction on test data</span>
 <span class="n">prediction</span> <span class="o">=</span> <span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">parameters</span><span class="p">)</span>
