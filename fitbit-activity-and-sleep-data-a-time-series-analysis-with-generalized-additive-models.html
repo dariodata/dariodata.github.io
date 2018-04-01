@@ -387,7 +387,7 @@ dtype: int64
 </pre></div>
 
 
-<p><img alt="png" src="fitbit_prophet_files/fitbit_prophet_13_1.png"></p>
+<p><img alt="png" src="images/fitbit_prophet_13_1.png"></p>
 <p>Step count is probably the most accurate measure obtained from a pedometer. Looking at the distribution of this variable, however, we can see that there is a chance that we have outliers in the data, as at least one value seems to be much higher than all the rest.</p>
 <div class="highlight"><pre><span></span><span class="c1"># sort data by step count in a descending order</span>
 <span class="n">data</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Steps&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -548,7 +548,7 @@ dtype: int64
 </pre></div>
 
 
-<p><img alt="png" src="fitbit_prophet_files/fitbit_prophet_20_0.png"></p>
+<p><img alt="png" src="images/fitbit_prophet_20_0.png"></p>
 <div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -793,7 +793,7 @@ dtype: int64
 </pre></div>
 
 
-<p><img alt="png" src="fitbit_prophet_files/fitbit_prophet_31_0.png"></p>
+<p><img alt="png" src="images/fitbit_prophet_31_0.png"></p>
 <p>We can see that the model did a good job in mimicking the behavior of step count during the year for which the data was available. This seems reasonable, as we do not expect the pattern to vary necessarily, if the person continues to have a similar lifestyle.</p>
 <p>Additionally, we can plot the components from the Generalized Additive Model and see their effect on the 'y' variable. In this case we have the general trend (remember we capped this at '10'), the yearly seasonality effect, and the weekly effect.</p>
 <div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">plot_components</span><span class="p">(</span><span class="n">forecast</span><span class="p">);</span>
@@ -801,7 +801,7 @@ dtype: int64
 </pre></div>
 
 
-<p><img alt="png" src="fitbit_prophet_files/fitbit_prophet_34_0.png"></p>
+<p><img alt="png" src="images/fitbit_prophet_34_0.png"></p>
 <p>Here we see some interesting patterns:
 - The general 'growth' trend is as expected, as we assumed that there would be no growth beyond the mean of the existing data.
 - The yearly effect shows a trend towards higher activity during the summer months, however the variation is considerable, probably due to the fact that our dataset consisted of the data for one year only
@@ -826,7 +826,7 @@ dtype: int64
 </pre></div>
 
 
-<p><img alt="png" src="fitbit_prophet_files/fitbit_prophet_39_1.png"></p>
+<p><img alt="png" src="images/fitbit_prophet_39_1.png"></p>
 <div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;cap&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
 <span class="n">m</span> <span class="o">=</span> <span class="n">Prophet</span><span class="p">(</span><span class="n">growth</span><span class="o">=</span><span class="s1">&#39;logistic&#39;</span><span class="p">,</span> <span class="n">yearly_seasonality</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 <span class="n">m</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
@@ -846,14 +846,14 @@ dtype: int64
 </pre></div>
 
 
-<p><img alt="png" src="fitbit_prophet_files/fitbit_prophet_40_1.png"></p>
+<p><img alt="png" src="images/fitbit_prophet_40_1.png"></p>
 <p>The model again seems to predict a similar sleep behavior for the predicted year. This seems reasonable, as we do not expect the pattern to vary necessarily, if the person continues to have a similar lifestyle.</p>
 <div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">plot_components</span><span class="p">(</span><span class="n">forecast</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;GAM components for prediction of MinutesOfSleep&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.02</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">);</span>
 </pre></div>
 
 
-<p><img alt="png" src="fitbit_prophet_files/fitbit_prophet_42_0.png"></p>
+<p><img alt="png" src="images/fitbit_prophet_42_0.png"></p>
 <p>A look at the amount of sleep reveals:
 - A saturation trend at the median (we set this assumption)
 - A yearly effect shows a trend towards higher amount of sleep during the summer months, with more variation during winter
@@ -910,7 +910,7 @@ dtype: int64
 </pre></div>
 
 
-<p><img alt="png" src="fitbit_prophet_files/fitbit_prophet_45_1.png"></p>
+<p><img alt="png" src="images/fitbit_prophet_45_1.png"></p>
 <div class="highlight"><pre><span></span>
 </pre></div>
         </div>
