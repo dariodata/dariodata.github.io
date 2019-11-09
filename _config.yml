@@ -1,7 +1,7 @@
 title: Dario Arcos-Díaz, PhD
 author: Dario Arcos-Díaz
 #email: your-email@domain.com
-description: > # this means to ignore newlines until "show_exerpts:"
+description: >- # this means to ignore newlines until "show_exerpts:"
   Data Scientist and Neuroscientist with strong statistical 
   modeling and programming skills at the intersection between 
   machine learning and the natural sciences.
@@ -14,11 +14,6 @@ url: "https://dariodata.github.io" # the base hostname & protocol for your site,
 sass:
   sass_dir: _sass
 plainwhite:
-  title: Dario Arcos-Díaz, PhD
-  description: >
-    Data Scientist and Neuroscientist with strong statistical 
-    modeling and programming skills at the intersection between 
-    machine learning and the natural sciences.
   name: Dario Arcos-Díaz, PhD
   tagline: |-
     Data Scientist &
