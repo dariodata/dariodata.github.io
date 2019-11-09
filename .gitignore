@@ -4,4 +4,4 @@
 _site
 Gemfile.lock
 .DS_Store
-.code-workspace
+*.code-workspace
